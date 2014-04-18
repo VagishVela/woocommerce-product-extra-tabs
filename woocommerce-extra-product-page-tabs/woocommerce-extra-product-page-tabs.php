@@ -9,6 +9,7 @@
  * License: GPL2
  */
 
+//****** TAB 1 AREA START HERE ******
 //* Add First Extra Tab Filter
 add_filter( 'woocommerce_product_tabs', 'woo_extra_product_tab_1' );
 function woo_extra_product_tab_1( $tabs ) {
@@ -32,15 +33,16 @@ $product_tab_1_values = get_post_custom_values('product_tab_1');
     }
 	else  { echo ''; }
 }
+//****** TAB 2 AREA ENDS HERE ******
 
 //Re-order WooCommerce Tabs
 
 add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
 function woo_reorder_tabs( $tabs ) {
  
-$tabs['reviews']['priority'] = 90; // Reviews last
-$tabs['description']['priority'] = 1; // Description first
-$tabs['additional_information']['priority'] = 80; // Additional second to last
+$tabs['reviews']['priority'] = 90; // Change number to change order
+$tabs['description']['priority'] = 1; // Change number to change order
+$tabs['additional_information']['priority'] = 80; // Change number to change order
  
 return $tabs;
 }
