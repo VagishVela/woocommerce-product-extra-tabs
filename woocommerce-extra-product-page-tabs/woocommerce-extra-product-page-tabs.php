@@ -28,7 +28,7 @@ $product_tab_1_values = get_post_custom_values('product_tab_1');
 	if ( is_array($product_tab_1_values) ) {
   foreach ( $product_tab_1_values as $product_tab_1_key => $product_tab_1_value ) {
 	echo '<h2>Tab 1</h2>'; // Replace Tab 1 with chosen name
-	echo $product_tab_1_value; 	   
+	echo wpautop(do_shortcode($product_tab_1_value)); // Automatically creates linebreaks, paragraphs and executes shortcodes
 	}
     }
 	else  { echo ''; }
