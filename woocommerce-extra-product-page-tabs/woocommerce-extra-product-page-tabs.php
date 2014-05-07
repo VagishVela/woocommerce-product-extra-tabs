@@ -42,7 +42,9 @@ function woo_reorder_tabs( $tabs ) {
  
 $tabs['reviews']['priority'] = 90; // Change number to change order
 $tabs['description']['priority'] = 1; // Change number to change order
-$tabs['additional_information']['priority'] = 80; // Change number to change order
+if(isset($tabs['additional_information'])) { 
+	$tabs['additional_information']['priority'] = 80; // Change number to change order
+} 
  
 return $tabs;
 }
