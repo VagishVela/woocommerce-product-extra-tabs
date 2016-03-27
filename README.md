@@ -1,4 +1,4 @@
-woocommerce-product-extra-tabs
+Woocommerce Product Extra Tabs
 ==============================
 
 To make extra tabs available in the Woocommerce Product page on Wordpress.
